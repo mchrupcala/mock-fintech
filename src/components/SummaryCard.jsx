@@ -2,10 +2,11 @@ import { useContext } from "react";
 import { StateContext } from "../App";
 
 const SummaryCard = () => {
-  const { bankSelection } = useContext(StateContext);
+  const { bankSelection, employerSelection } = useContext(StateContext);
   return (
     <div>
-      <p>Selected: {bankSelection.name}</p>
+      <p>Bank: {bankSelection.name}</p>
+      <p>Employer: {employerSelection}</p>
     </div>
   );
 };

@@ -15,9 +15,17 @@ export const banks = [
 
 function App() {
   const [bankSelection, setBankSelection] = useState(banks[0]);
+  const [employerSelection, setEmployerSelection] = useState(null);
 
   return (
-    <StateContext.Provider value={{ bankSelection, setBankSelection }}>
+    <StateContext.Provider
+      value={{
+        bankSelection,
+        employerSelection,
+        setBankSelection,
+        setEmployerSelection,
+      }}
+    >
       <div className="App">
         <EmployerSearch />
         <BankSelection />
